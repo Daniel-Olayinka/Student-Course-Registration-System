@@ -1,8 +1,30 @@
+import java.util.ArrayList;
+
 class Student{
-    int id;
-    String name;
-    String email;
-    String registeredCourses;
+    private String id;
+    private String School = "AU";//Arbitrary University
+    private String name;
+    private String email;
+    private ArrayList<Course> registeredCourses; //This list is specifically allowed to contain Course objects
+
+    Student(int id, String name, String email) {
+        this.id = id + School;
+        this.name = name;
+        this.email = email;
+        this.registeredCourses = new ArrayList<>();
+    }
+    public String getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public ArrayList<Course> getRegisteredCourses(){
+        return registeredCourses;
+    }
 }
 class Course {
     private String code;
@@ -38,7 +60,24 @@ class Course {
 }
 
 class RegistrationService{
-     public void registerStudent(){}
+    private ArrayList<Student> students;
+    private ArrayList<Course> courses;
+     public void registerStudent(){
+
+     }
+
+     void addCourse(){
+
+     }
+
+     void studentsForCourse(){
+
+     }
+
+     void dropCourse(){
+
+     }
+
 }
 
 public class Main {
